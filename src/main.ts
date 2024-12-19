@@ -2,7 +2,6 @@ import * as THREE from 'three';
 import { VRButton } from "three/examples/jsm/webxr/VRButton.js";
 import { XRControllerModelFactory } from "three/examples/jsm/webxr/XRControllerModelFactory.js";
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import {Vector3} from "three";
 
 const sphere = new THREE.SphereGeometry(0.2);
 const mat = new THREE.MeshBasicMaterial({
@@ -67,7 +66,7 @@ loader.load("/glove/scene.gltf", (gltf) => {
 
 loader.load("bag/scene.gltf", (gltf) => {
     bag.add(gltf.scene);
-    bagMesh = gltf.scene;
+    bagMesh = gltf.scene as any;
     bagMesh.position.set(0, -3.5, 0);
     bagMesh.scale.set(30, 30, 30);
 });
