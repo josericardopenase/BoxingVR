@@ -24,6 +24,7 @@ const model2 = controllerModelFactory.createControllerModel(controllerR);
 controllerR.add(model2);
 scene.add(controllerR);
 
+
 const light = new THREE.DirectionalLight(0xffffff, 1)
 light.rotateZ(Math.PI/2)
 scene.add(light);
