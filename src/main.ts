@@ -39,14 +39,14 @@ loader.load("/ring/scene.gltf", (gltf) => {
 loader.load("/glove/scene.gltf", (gltf) => {
     controllerR.add(gltf.scene);
     gltf.scene.position.set(0, 0, 0);
-    gltf.scene.scale.set(0.05, 0.05, 0.05);
+    gltf.scene.scale.set(-0.01, 0.01, 0.01);
     gltf.scene.rotation.set(-2.2, 0,  0);
 });
 
 loader.load("/glove/scene.gltf", (gltf) => {
     controllerL.add(gltf.scene);
     gltf.scene.position.set(0, 0, 0);
-    gltf.scene.scale.set(-0.05, 0.05, 0.05);
+    gltf.scene.scale.set(0.01, 0.01, 0.01);
     gltf.scene.rotation.set(-2.2, 0,  0);
 });
 
