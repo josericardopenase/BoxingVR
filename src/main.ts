@@ -32,21 +32,21 @@ scene.add(light);
 const loader = new GLTFLoader();
 loader.load("/ring/scene.gltf", (gltf) => {
     scene.add(gltf.scene);
-    gltf.scene.position.set(0, 0, 0);
+    gltf.scene.position.set(0, -0.5, 0);
     gltf.scene.scale.set(0.8, 0.8, 0.8)
 });
 
 loader.load("/glove/scene.gltf", (gltf) => {
     controllerR.add(gltf.scene);
     gltf.scene.position.set(0, 0, 0);
-    gltf.scene.scale.set(-0.01, 0.01, 0.01);
+    gltf.scene.scale.set(-0.025, 0.025, 0.025);
     gltf.scene.rotation.set(-2.2, 0,  0);
 });
 
 loader.load("/glove/scene.gltf", (gltf) => {
     controllerL.add(gltf.scene);
     gltf.scene.position.set(0, 0, 0);
-    gltf.scene.scale.set(0.01, 0.01, 0.01);
+    gltf.scene.scale.set(0.025, 0.025, 0.025);
     gltf.scene.rotation.set(-2.2, 0,  0);
 });
 
